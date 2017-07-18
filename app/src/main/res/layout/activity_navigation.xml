@@ -9,22 +9,4 @@
 
     </com.cleveroad.slidingtutorial.ViewPagerWrapper>
 
-    <!--
-    <com.cleveroad.slidingtutorial.CirclePageIndicator
-        android:id="@+id/indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        />
-
-    <TextView
-        android:id="@+id/tvSkip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        />
-        -->
-
 </RelativeLayout>
