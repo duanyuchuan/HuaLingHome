@@ -14,6 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="138dp"
         >
 
 
@@ -24,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="80dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
         android:text="开启旅程"
         android:visibility="gone"
         />

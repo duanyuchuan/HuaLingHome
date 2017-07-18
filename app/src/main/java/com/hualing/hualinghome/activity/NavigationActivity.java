@@ -32,6 +32,7 @@ public class NavigationActivity extends BaseActivity implements View.OnClickList
     private Button mBtnStart;
     private LinearLayout mLLyPonit;
     private ArrayList<ImageView> mPageData;
+    private ArrayList<ImageView> mPponit;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,11 +68,27 @@ public class NavigationActivity extends BaseActivity implements View.OnClickList
                 }else{
                     mBtnStart.setVisibility(View.GONE);
                 }
+                selectImagePonit(position);
             }
             @Override
             public void onPageScrollStateChanged(int state) {
             }
         });
+    }
+    /**
+     * 导航页面的指示器
+     * @param position
+     */
+    public void selectImagePonit(int position){
+        int size = mPponit.size();
+        for (int i=0;i<size;i++){
+            ImageView imageView = mPponit.get(i);
+            if(position==i){
+                imageView.setImageResource(R.drawable.selected_ponit);
+            }else{
+                imageView.setImageResource(R.drawable.normal_ponit);
+            }
+        }
     }
     /**
      * 点击开始按钮
@@ -86,6 +103,8 @@ public class NavigationActivity extends BaseActivity implements View.OnClickList
      */
     public void initData(){
         mPageData=new ArrayList<ImageView>();
+        mPponit=new ArrayList<ImageView>();
+
         ImageView imageView1=new ImageView(mContext);
         Bitmap bitmap1 = getBitmapByResource(R.mipmap.navigation01);
         imageView1.setImageBitmap(bitmap1);
@@ -104,6 +123,20 @@ public class NavigationActivity extends BaseActivity implements View.OnClickList
         imageView3.setScaleType(ImageView.ScaleType.FIT_XY);
         mPageData.add(imageView3);
 
+        int size = mPageData.size();
+        for(int i=0;i<size;i++){
+            ImageView ponitImageView=new ImageView(mContext);
+            ponitImageView.setImageResource(R.drawable.normal_ponit);
+            LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+            if(i !=0 ){
+                params.setMargins(20,0,0,0);
+            }
+            ponitImageView.setLayoutParams(params);
+            mPponit.add(ponitImageView);
+            mLLyPonit.addView(ponitImageView);
+        }
+        //设置默认选中第一页
+        selectImagePonit(0);
     }
     /**
      * 从资源文件中获取有个bitmap对象
