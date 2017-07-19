@@ -30,7 +30,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:text="开启旅程"
+        android:textSize="18dp"
+        android:textColor="@color/selector_navigation_start_btn"
         android:visibility="gone"
+        android:background="@drawable/selector_navigation_start_btn"
         />
 
 </RelativeLayout>
