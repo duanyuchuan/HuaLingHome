@@ -141,6 +141,10 @@ public class SplashActivity extends BaseActivity{
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
+                        mSkipButtonView.setVisibility(View.GONE);
+                        Message message = mMyHandler.obtainMessage(1);
+                        //mMyHandler.sendMessage(message);
+                        mMyHandler.sendMessageDelayed(message,3000);
                     }
                 }
         );
@@ -233,6 +237,15 @@ public class SplashActivity extends BaseActivity{
                             //不是第一次启动直接进入主页面
                             StartActivity.startActivity(splashActivity,HomeActivity.class,true);
                         }
+                    }
+                    break;
+                case 1:
+                    if(splashActivity.mIsFrist){
+                        //第一次启动进入导航页面
+                        StartActivity.startActivity(splashActivity,NavigationActivity.class,true);
+                    }else{
+                        //不是第一次启动直接进入主页面
+                        StartActivity.startActivity(splashActivity,HomeActivity.class,true);
                     }
                     break;
             }
