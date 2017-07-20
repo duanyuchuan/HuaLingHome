@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">华领之家</string>
     <string name="text_web_ceo">好美啊</string>
+
+    <!--定义字符串数组-->
+    <string-array name="shop_tab">
+        <item>推荐</item>
+        <item>活动</item>
+        <item>全球旗舰</item>
+        <item>华领严选</item>
+        <item>母婴</item>
+        <item>美妆护理</item>
+        <item>箱包装饰</item>
+        <item>美食保健</item>
+        <item>家居</item>
+        <item>直邮数码</item>
+        <item>远动户外</item>
+        <item>服装鞋靴</item>
+        <item>生鲜</item>
+        <item>国家馆</item>
+    </string-array>
 </resources>
