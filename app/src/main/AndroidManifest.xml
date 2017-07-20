@@ -14,7 +14,10 @@
         android:name=".global.BaseApplication"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity">
+        <activity
+            android:name=".HomeActivity"
+            android:launchMode="singleTask">
+
         </activity>
         <activity android:name=".activity.SplashActivity">
             <intent-filter>

@@ -112,7 +112,7 @@ public class SplashActivity extends BaseActivity{
                                                 getAdertImage(imageAdvertUrl);
                                                 indext++;
                                                 SharedpreferencesUtil.putInt(UiUtils.getContext(),MyConstaints.LAST_IMAGE_INDEX,indext);
-                                                SharedpreferencesUtil.putBoolean(UiUtils.getContext(),MyConstaints.ISFIRST,false);
+
                                                 mMyHandler.post(reshSkipButtonRunnable);
                                             }
                                         }
@@ -194,6 +194,7 @@ public class SplashActivity extends BaseActivity{
     public void onBackPressed() {
         super.onBackPressed();
         mMyHandler.removeCallbacks(reshSkipButtonRunnable);
+        mMyHandler.removeMessages(1);
     }
     /**
      * Activity暂停的时候移除
@@ -202,6 +203,7 @@ public class SplashActivity extends BaseActivity{
     protected void onPause() {
         super.onPause();
         mMyHandler.removeCallbacks(reshSkipButtonRunnable);
+        mMyHandler.removeMessages(1);
     }
     /**Activity重新启动时重新发消息
      */
@@ -209,6 +211,7 @@ public class SplashActivity extends BaseActivity{
     protected void onRestart() {
         super.onRestart();
         mMyHandler.post(reshSkipButtonRunnable);
+        mMyHandler.sendEmptyMessageDelayed(1,3000);
     }
     /**
      * 自定义Handler
