@@ -8,19 +8,16 @@ import android.view.ViewGroup;
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.base.BaseFragment;
 
-/**
- * Created by Administrator on 2017/7/20.
+/**推荐
+ * Created by Administrator on 2017/7/21.
  */
 
-public class ShardFragment extends BaseFragment {
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+public class RecommendedFragment extends BaseFragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_shard,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_recommended, container, false);
+
+        return rootView;
     }
 }

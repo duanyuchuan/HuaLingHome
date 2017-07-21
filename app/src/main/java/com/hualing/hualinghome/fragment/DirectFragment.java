@@ -5,22 +5,19 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.base.BaseFragment;
 
-/**
- * Created by Administrator on 2017/7/20.
+/**直邮数码
+ * Created by Administrator on 2017/7/21.
  */
 
-public class ShardFragment extends BaseFragment {
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+public class DirectFragment extends BaseFragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_shard,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_direct, container, false);
+        return rootView;
     }
 }

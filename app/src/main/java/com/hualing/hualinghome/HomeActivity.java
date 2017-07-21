@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+
 import com.hualing.hualinghome.base.BaseActivity;
 import com.hualing.hualinghome.fragment.FindFragment;
 import com.hualing.hualinghome.fragment.HomeFragment;
@@ -19,11 +20,15 @@ import com.hualing.hualinghome.view.LayoutBottomBar;
  */
 public class HomeActivity extends BaseActivity implements IBottomItemClickListener {
     private LayoutBottomBar mLayoutBottomBar;
+    private HomeFragment mHomeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setFullScrean(false);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        setNoTitleBar(true);
+        //StatusBarCompat.compat(this, Color.TRANSPARENT);
         //初始化视图
         initView();
     }
@@ -32,8 +37,10 @@ public class HomeActivity extends BaseActivity implements IBottomItemClickListen
      * 初始化视图
      */
     private void initView() {
-        mLayoutBottomBar=findViewById(R.id.bottombar);
+        mLayoutBottomBar=(LayoutBottomBar)findViewById(R.id.bottombar);
         mLayoutBottomBar.setOnIBottomItemClickListener(this);
+        mHomeFragment=new HomeFragment();
+        replaceContentByFragment(mHomeFragment);
     }
 
     /**
@@ -44,7 +51,12 @@ public class HomeActivity extends BaseActivity implements IBottomItemClickListen
     public void onBottomItemClick(View view) {
         switch (view.getId()){
             case R.id.rl_home:
-                replaceContentByFragment(new HomeFragment());
+                if(mHomeFragment != null){
+                    replaceContentByFragment(mHomeFragment);
+                }else{
+                    mHomeFragment=new HomeFragment();
+                    replaceContentByFragment(mHomeFragment);
+                }
                 break;
             case R.id.rl_shard:
                 replaceContentByFragment(new ShardFragment());

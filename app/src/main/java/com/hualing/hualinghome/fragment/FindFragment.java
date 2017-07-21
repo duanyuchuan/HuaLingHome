@@ -2,18 +2,17 @@ package com.hualing.hualinghome.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.hualing.hualinghome.R;
+import com.hualing.hualinghome.base.BaseFragment;
 
 /**
  * Created by Administrator on 2017/7/20.
  */
 
-public class FindFragment extends Fragment{
+public class FindFragment extends BaseFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
