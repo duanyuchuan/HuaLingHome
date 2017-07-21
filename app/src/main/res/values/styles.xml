@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TranslucentTheme" parent="AppTheme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
     <declare-styleable name="SkipButtonView">
         <attr name="SkipButtonColor" format="color"/>
         <attr name="OuterColor" format="color"/>

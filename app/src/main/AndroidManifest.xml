@@ -13,10 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:name=".global.BaseApplication"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <activity
             android:name=".HomeActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            >
 
         </activity>
         <activity android:name=".activity.SplashActivity">
