@@ -1,4 +1,4 @@
-package com.hualing.hualinghome.fragment;
+package com.hualing.hualinghome.fragment.shop;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,20 +1,20 @@
 package com.hualing.hualinghome.business;
 
 import com.hualing.hualinghome.base.BaseFragment;
-import com.hualing.hualinghome.fragment.ActivityFragment;
-import com.hualing.hualinghome.fragment.BagsFragment;
-import com.hualing.hualinghome.fragment.BeautyFragment;
-import com.hualing.hualinghome.fragment.ClothingShoeFragment;
-import com.hualing.hualinghome.fragment.DirectFragment;
-import com.hualing.hualinghome.fragment.FoodAndHealthFragment;
-import com.hualing.hualinghome.fragment.FreshFragment;
-import com.hualing.hualinghome.fragment.GlobalFragment;
-import com.hualing.hualinghome.fragment.HouseHoldFragment;
-import com.hualing.hualinghome.fragment.HuaLingSelectionFragment;
-import com.hualing.hualinghome.fragment.MaternalFragment;
-import com.hualing.hualinghome.fragment.PavilionFragment;
-import com.hualing.hualinghome.fragment.RecommendedFragment;
-import com.hualing.hualinghome.fragment.RemoteOutdoorFragment;
+import com.hualing.hualinghome.fragment.shop.ActivityFragment;
+import com.hualing.hualinghome.fragment.shop.BagsFragment;
+import com.hualing.hualinghome.fragment.shop.BeautyFragment;
+import com.hualing.hualinghome.fragment.shop.ClothingShoeFragment;
+import com.hualing.hualinghome.fragment.shop.DirectFragment;
+import com.hualing.hualinghome.fragment.shop.FoodAndHealthFragment;
+import com.hualing.hualinghome.fragment.shop.FreshFragment;
+import com.hualing.hualinghome.fragment.shop.GlobalFragment;
+import com.hualing.hualinghome.fragment.shop.HouseHoldFragment;
+import com.hualing.hualinghome.fragment.shop.HuaLingSelectionFragment;
+import com.hualing.hualinghome.fragment.shop.MaternalFragment;
+import com.hualing.hualinghome.fragment.shop.PavilionFragment;
+import com.hualing.hualinghome.fragment.shop.RecommendedFragment;
+import com.hualing.hualinghome.fragment.shop.RemoteOutdoorFragment;
 import java.util.HashMap;
 
 /**创建Fragment的工厂类

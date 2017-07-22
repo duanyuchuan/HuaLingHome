@@ -1,4 +1,4 @@
-package com.hualing.hualinghome.fragment;
+package com.hualing.hualinghome.fragment.my;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,17 +12,15 @@ import com.hualing.hualinghome.base.BaseFragment;
  * Created by Administrator on 2017/7/20.
  */
 
-public class HomeFragment extends BaseFragment {
+public class MyFragment extends BaseFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        return inflater.inflate(R.layout.fragment_home,container,false);
+        return inflater.inflate(R.layout.fragment_my,container,false);
     }
 }

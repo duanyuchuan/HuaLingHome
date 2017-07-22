@@ -1,4 +1,4 @@
-package com.hualing.hualinghome.fragment;
+package com.hualing.hualinghome.fragment.shop;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,15 +9,15 @@ import android.view.ViewGroup;
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.base.BaseFragment;
 
-/**箱包装饰
+/**母婴
  * Created by Administrator on 2017/7/21.
  */
 
-public class BagsFragment extends BaseFragment{
+public class MaternalFragment extends BaseFragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_bags, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_maternal, container, false);
         return rootView;
     }
 }

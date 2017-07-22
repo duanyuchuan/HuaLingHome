@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="50dp"
+              android:layout_height="48dp"
             android:weightSum="5"
             android:background="#FFFFFF"
             android:gravity="center_vertical"
@@ -15,12 +15,13 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
-
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         >
         <ImageView
             android:id="@+id/iv_home_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="24dp"
             android:src="@drawable/selector_home_bottombar"
             />
         <ImageView
@@ -37,10 +38,10 @@
         <TextView
             android:id="@+id/tv_home_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="22dp"
+            android:layout_height="24dp"
             android:text="精华"
             android:textColor="@color/selector_home_bottombar"
-            android:textSize="16dp"
+            android:textSize="12dp"
             android:layout_below="@id/iv_home_bottombar"
             android:gravity="center"
             />
@@ -51,11 +52,13 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         >
         <ImageView
             android:id="@+id/iv_shard_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="24dp"
             android:src="@drawable/selector_shard_bottombar"
             />
         <ImageView
@@ -72,10 +75,10 @@
         <TextView
             android:id="@+id/tv_shard_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="22dp"
+            android:layout_height="24dp"
             android:text="微享"
             android:textColor="@color/selector_home_bottombar"
-            android:textSize="16dp"
+            android:textSize="12dp"
             android:layout_below="@id/iv_shard_bottombar"
             android:gravity="center"
             />
@@ -86,11 +89,13 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         >
         <ImageView
             android:id="@+id/iv_find_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="24dp"
             android:src="@drawable/selector_find_bottombar"
             />
         <ImageView
@@ -107,10 +112,10 @@
         <TextView
             android:id="@+id/tv_find_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="22dp"
+            android:layout_height="24dp"
             android:text="寻觅"
             android:textColor="@color/selector_home_bottombar"
-            android:textSize="16dp"
+            android:textSize="12dp"
             android:layout_below="@id/iv_find_bottombar"
             android:gravity="center"
             />
@@ -121,11 +126,13 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         >
         <ImageView
             android:id="@+id/iv_shop_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="24dp"
             android:src="@drawable/selector_shop_bottombar"
             />
         <ImageView
@@ -142,10 +149,10 @@
         <TextView
             android:id="@+id/tv_shop_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="22dp"
+            android:layout_height="24dp"
             android:text="败呗"
             android:textColor="@color/selector_home_bottombar"
-            android:textSize="16dp"
+            android:textSize="12dp"
             android:layout_below="@id/iv_shop_bottombar"
             android:gravity="center"
             />
@@ -156,11 +163,13 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
         >
         <ImageView
             android:id="@+id/iv_my_hualing_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="24dp"
             android:src="@drawable/selector_my_bottombar"
             />
         <ImageView
@@ -177,10 +186,10 @@
         <TextView
             android:id="@+id/tv_my_hualing_bottombar"
             android:layout_width="match_parent"
-            android:layout_height="22dp"
+            android:layout_height="24dp"
             android:text="我的"
             android:textColor="@color/selector_home_bottombar"
-            android:textSize="16dp"
+            android:textSize="12dp"
             android:layout_below="@id/iv_my_hualing_bottombar"
             android:gravity="center"
             />
