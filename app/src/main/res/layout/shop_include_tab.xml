@@ -10,8 +10,13 @@
         app:stl_customTabTextViewId="@+id/text_4"
         app:stl_indicatorColor="@android:color/holo_red_dark"
         app:stl_indicatorInterpolation="linear"
-        app:stl_indicatorThickness="3dp"
-        app:stl_underlineThickness="1dp"
+        app:stl_indicatorThickness="1dp"
+        app:stl_underlineThickness="0dp"
+        app:stl_overlineThickness="0dp"
+        app:stl_overlineColor="#ffffff"
+        app:stl_dividerColor="#4D000000"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorCornerRadius="2dp"
     >
 
 </com.ogaclejapan.smarttablayout.SmartTabLayout>

@@ -41,17 +41,25 @@
     
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#DCDCDC"
+        android:layout_height="1dp"
+        android:background="#ECECEC"
         />
     <!--头布局 end-->
     <!--页签布局 start-->
     <FrameLayout
         android:id="@+id/fl_shop_tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        />
 
     <!--页签布局 end-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ECECEC"
+        />
     <!--内容布局 start-->
     <FrameLayout
         android:layout_width="match_parent"
