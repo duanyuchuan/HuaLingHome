@@ -2,7 +2,7 @@
     <string name="app_name">华领之家</string>
     <string name="text_web_ceo">好美啊</string>
 
-    <!--定义字符串数组-->
+    <!--定义shop页签字符串数组-->
     <string-array name="shop_tab">
         <item>推荐</item>
         <item>活动</item>
@@ -18,5 +18,16 @@
         <item>服装鞋靴</item>
         <item>生鲜</item>
         <item>国家馆</item>
+    </string-array>
+    <!--定义home页签字符串数组-->
+    <string-array name="home_tab">
+        <item>华领号外</item>
+        <item>时尚</item>
+        <item>彩妆护肤</item>
+        <item>母婴</item>
+        <item>运动旅行</item>
+        <item>娱乐</item>
+        <item>家居美食</item>
+        <item>直播微生活</item>
     </string-array>
 </resources>

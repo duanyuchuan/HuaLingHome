@@ -1,29 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:background="#ff00ff"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <!--标题布局-->
+    <!--标题布局start-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#ff00ff">
-
-        <TextView
+        android:background="#22698B22"
+        android:paddingTop="20dp"
+        >
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="这是标题"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@mipmap/logo3_0"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="华领"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginLeft="3dp"
+                />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/ib_live"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@mipmap/i_like_solid_icon"
+            android:background="@null"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+        <ImageButton
+            android:id="@+id/ib_home_search"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@mipmap/cs_pass_undisplay"
+            android:background="@null"
+            android:layout_toLeftOf="@id/ib_live"
+            android:layout_alignBottom="@id/ib_live"
+            android:layout_marginRight="16dp"
+            />
     </RelativeLayout>
-
-    <ImageView
+    <!--标题布局end-->
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@mipmap/xinggan4"
+        android:layout_height="1dp"
+        android:background="#66698B22"
         />
+    <!--页签布局start-->
+    <FrameLayout
+        android:id="@+id/fl_home_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#22698B22"
+        />
+    <!--页签布局end-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#66698B22"
+        />
+    <!--页签布局start-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_home_content_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+    <!--页签布局end-->
 </LinearLayout>
