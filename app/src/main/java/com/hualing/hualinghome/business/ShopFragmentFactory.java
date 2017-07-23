@@ -21,7 +21,7 @@ import java.util.HashMap;
  * Created by Administrator on 2017/7/21.
  */
 
-public class FragmentFactory {
+public class ShopFragmentFactory {
     //存放Fragment的集合
     private static HashMap<Integer,BaseFragment> mFragmentMap=new HashMap<Integer,BaseFragment>();
     /**

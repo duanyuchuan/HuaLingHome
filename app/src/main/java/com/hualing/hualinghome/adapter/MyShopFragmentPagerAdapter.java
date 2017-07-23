@@ -4,37 +4,31 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.hualing.hualinghome.bean.FragmentInfo;
-
-import java.util.ArrayList;
+import com.hualing.hualinghome.R;
+import com.hualing.hualinghome.business.ShopFragmentFactory;
+import com.hualing.hualinghome.utils.UiUtils;
 
 /**
  * Created by Administrator on 2017/7/21.
  */
 
 public class MyShopFragmentPagerAdapter extends FragmentStatePagerAdapter{
-    private ArrayList<FragmentInfo> mShopFragmentData=new ArrayList<>();
+    String[] tabInfos ;
 
-    public MyShopFragmentPagerAdapter(FragmentManager fm,ArrayList<FragmentInfo> shopFragmentData) {
+    public MyShopFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
-        this.mShopFragmentData=shopFragmentData;
+        tabInfos = UiUtils.getResourcesStringArray(R.array.shop_tab);
     }
     @Override
     public int getCount() {
-        return (mShopFragmentData!=null && mShopFragmentData.size()>0) ? mShopFragmentData.size() : 0;
+        return (tabInfos.length>0) ? tabInfos.length : 0;
     }
     @Override
     public Fragment getItem(int position) {
-        if(mShopFragmentData != null && mShopFragmentData.size()>0){
-            return mShopFragmentData.get(position).getFragment();
-        }
-        return null;
+        return ShopFragmentFactory.createFragment(position);
     }
     @Override
     public CharSequence getPageTitle(int position) {
-        if(mShopFragmentData != null && mShopFragmentData.size()>0) {
-            return mShopFragmentData.get(position).getTitle();
-        }
-        return "";
+        return tabInfos[position];
     }
 }

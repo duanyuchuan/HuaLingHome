@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.base.BaseFragment;
+import com.hualing.hualinghome.base.BaseViewLoadPage;
 
 /**
  * Created by Administrator on 2017/7/20.
@@ -22,5 +23,15 @@ public class MyFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_my,container,false);
+    }
+
+    @Override
+    public View onCreateLoadSuccesView() {
+        return null;
+    }
+
+    @Override
+    public BaseViewLoadPage.ResultState onLoadData() {
+        return null;
     }
 }

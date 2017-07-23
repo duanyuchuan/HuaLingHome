@@ -7,15 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.adapter.MyShopFragmentPagerAdapter;
 import com.hualing.hualinghome.base.BaseFragment;
-import com.hualing.hualinghome.bean.FragmentInfo;
-import com.hualing.hualinghome.utils.UiUtils;
+import com.hualing.hualinghome.base.BaseViewLoadPage;
+import com.hualing.hualinghome.business.ShopFragmentFactory;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
-
-import java.util.ArrayList;
 
 /**
  * Created by Administrator on 2017/7/20.
@@ -24,23 +21,31 @@ import java.util.ArrayList;
 public class ShopFragment extends BaseFragment{
     private ViewPager mViewPager;
     private SmartTabLayout mSmartTabLayout;
-    private ArrayList<FragmentInfo> mShopFragmentData;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_shop, container, false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_shop,container,false);
     }
+
+    @Override
+    public View onCreateLoadSuccesView() {
+        return null;
+    }
+
+    @Override
+    public BaseViewLoadPage.ResultState onLoadData() {
+        return null;
+    }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //初始化数据
-        initData();
         //初始化视图
         initView();
+        //监听事件事件
+        initEnvent();
     }
-
     /**
      * 初始化视图
      */
@@ -51,26 +56,29 @@ public class ShopFragment extends BaseFragment{
         mSmartTabLayout=(SmartTabLayout)getActivity().findViewById(R.id.st_shop_smart_tab);
         mViewPager=(ViewPager)getActivity().findViewById(R.id.vp_shop_content);
 
-        String[] tabInfos = UiUtils.getResourcesStringArray(R.array.shop_tab);
-        int length=tabInfos.length;
-        for(int i=0;i<length;i++){
-            FragmentInfo info;
-            if(i==0){
-                info=new FragmentInfo(new RecommendedFragment(),tabInfos[i]);
-            }else{
-                info= new FragmentInfo(new ActivityFragment(),tabInfos[i]);
-            }
-            mShopFragmentData.add(info);
-        }
-
-        MyShopFragmentPagerAdapter adpter=new MyShopFragmentPagerAdapter(getFragmentManager(),mShopFragmentData);
+        MyShopFragmentPagerAdapter adpter=new MyShopFragmentPagerAdapter(getFragmentManager());
         mViewPager.setAdapter(adpter);
         mSmartTabLayout.setViewPager(mViewPager);
     }
     /**
-     * 初始化数据
+     * 监听事件事件
      */
-    private void initData() {
-        mShopFragmentData=new ArrayList<>();
+    public void initEnvent(){
+        //设置ViewPage的滑动监听对象
+        mSmartTabLayout.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+            @Override
+            public void onPageSelected(int position) {
+                BaseFragment fragment = ShopFragmentFactory.createFragment(position);
+                fragment.startLoadDataFromNetWork();
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 }
