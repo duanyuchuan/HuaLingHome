@@ -1,7 +1,6 @@
 package com.hualing.hualinghome.fragment.home;
 
 import android.view.View;
-
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.base.BaseFragment;
 import com.hualing.hualinghome.base.BaseViewLoadPage;
@@ -20,6 +19,6 @@ public class ProtectSkinFragment extends BaseFragment{
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
-        return BaseViewLoadPage.ResultState.STATE_SUCCES;
+        return BaseViewLoadPage.ResultState.LOAD_ERROR;
     }
 }

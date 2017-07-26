@@ -5,6 +5,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/diao3"
+        android:src="@mipmap/i_like_solid_icon"
         />
 </RelativeLayout>

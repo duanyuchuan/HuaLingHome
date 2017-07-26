@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.hualing.hualinghome.utils.UiUtils;
 
+import java.util.ArrayList;
+
 /**
  * Created by Administrator on 2017/7/21.
  */
@@ -47,5 +49,23 @@ public abstract class BaseFragment extends Fragment{
         if(mBaseViewLoadPage != null){
             mBaseViewLoadPage.loadDataFromNetWork();
         }
+    }
+    /**
+     *校验数据的合法性
+     * @param object
+     * @return
+     */
+    public BaseViewLoadPage.ResultState check(Object object){
+        if(object != null){
+            if(object instanceof ArrayList){
+                ArrayList arrayList=(ArrayList) object;
+                if(!arrayList.isEmpty()){
+                    return BaseViewLoadPage.ResultState.LOAD_SUCCES;
+                }else{
+                    return BaseViewLoadPage.ResultState.LOAD_EMPTY;
+                }
+            }
+        }
+        return BaseViewLoadPage.ResultState.LOAD_ERROR;
     }
 }

@@ -6,6 +6,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/xinggan4"
+        android:src="@mipmap/activity_focus"
         />
 </LinearLayout>

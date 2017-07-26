@@ -12,55 +12,50 @@ import com.hualing.hualinghome.fragment.home.SportsTravelFragment;
 
 import java.util.HashMap;
 
-/**创建Fragment的工厂类
- * Created by Administrator on 2017/7/21.
+/**创建主页面fragment的工厂
+ * Created by Administrator on 2017/7/24.
  */
 
 public class HomeFragmentFactory {
-    //存放Fragment的集合
-    private static HashMap<Integer,BaseFragment> mFragmentMap=new HashMap<Integer,BaseFragment>();
+    //存储创建的fragment对象
+    private static HashMap<Integer,BaseFragment> sFragmentHashMap=new HashMap<Integer,BaseFragment>();
     /**
-     * 生成Fragment的方法
+     * 根据位置创建fragment对象
      * @param position
+     * @return
      */
     public static BaseFragment createFragment(int position){
-        BaseFragment fragment= mFragmentMap.get(position);
+        BaseFragment fragment = sFragmentHashMap.get(position);
         if(fragment==null){
             switch (position){
                 case 0:
-                    //华领号外
                     fragment=new HuaLingNewsFragment();
                     break;
                 case 1:
-                    //时尚
                     fragment=new FashionFragment();
                     break;
                 case 2:
-                    //彩妆护肤
                     fragment=new ProtectSkinFragment();
                     break;
                 case 3:
-                    //母婴
                     fragment=new MaternalAndInfantFragment();
                     break;
                 case 4:
-                    //运动旅行
                     fragment=new SportsTravelFragment();
                     break;
                 case 5:
-                    //娱乐
                     fragment=new EntertainmentFragment();
                     break;
                 case 6:
-                    //家居美食
                     fragment=new HouseHoldFoodFragment();
                     break;
                 case 7:
-                    //直播微生活
                     fragment=new LiveMicroLifeFragment();
                     break;
+                default:
+                    break;
             }
-            mFragmentMap.put(position,fragment);
+            sFragmentHashMap.put(position,fragment);
         }
         return fragment;
     }

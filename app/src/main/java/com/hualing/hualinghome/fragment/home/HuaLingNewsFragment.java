@@ -1,8 +1,8 @@
 package com.hualing.hualinghome.fragment.home;
 
 import android.view.View;
+import android.widget.TextView;
 
-import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.base.BaseFragment;
 import com.hualing.hualinghome.base.BaseViewLoadPage;
 import com.hualing.hualinghome.utils.UiUtils;
@@ -15,11 +15,16 @@ public class HuaLingNewsFragment extends BaseFragment{
 
     @Override
     public View onCreateLoadSuccesView() {
-        return UiUtils.inflate(R.layout.fragment_hualingnews);
+        TextView textView=new TextView(UiUtils.getContext());
+        textView.setText("华领外号............");
+        return textView;
     }
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
-        return BaseViewLoadPage.ResultState.STATE_ERROR;
+
+
+        //ArrayList<String> data=new ArrayList<>();
+        return BaseViewLoadPage.ResultState.LOAD_SUCCES;
     }
 }

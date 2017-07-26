@@ -15,21 +15,23 @@ import com.hualing.hualinghome.fragment.shop.MaternalFragment;
 import com.hualing.hualinghome.fragment.shop.PavilionFragment;
 import com.hualing.hualinghome.fragment.shop.RecommendedFragment;
 import com.hualing.hualinghome.fragment.shop.RemoteOutdoorFragment;
+
 import java.util.HashMap;
 
-/**创建Fragment的工厂类
- * Created by Administrator on 2017/7/21.
+/**购物页面生产Fragment的工厂类
+ * Created by Administrator on 2017/7/24.
  */
 
-public class ShopFragmentFactory {
-    //存放Fragment的集合
-    private static HashMap<Integer,BaseFragment> mFragmentMap=new HashMap<Integer,BaseFragment>();
+public class ShopFragmentFractory {
+    //存储创建的fragment对象
+    private static HashMap<Integer,BaseFragment> mFragmentHashMap=new HashMap<Integer,BaseFragment>();
     /**
-     * 生成Fragment的方法
+     * 根据位置创建fragment对象
      * @param position
+     * @return
      */
     public static BaseFragment createFragment(int position){
-        BaseFragment fragment= mFragmentMap.get(position);
+        BaseFragment fragment = mFragmentHashMap.get(position);
         if(fragment==null){
             switch (position){
                 case 0:
@@ -74,8 +76,10 @@ public class ShopFragmentFactory {
                 case 13:
                     fragment=new PavilionFragment();
                     break;
+                default:
+                    break;
             }
-            mFragmentMap.put(position,fragment);
+            mFragmentHashMap.put(position,fragment);
         }
         return fragment;
     }

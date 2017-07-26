@@ -20,6 +20,6 @@ public class LiveMicroLifeFragment extends BaseFragment{
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
-        return BaseViewLoadPage.ResultState.STATE_SUCCES;
+        return BaseViewLoadPage.ResultState.LOAD_SUCCES;
     }
 }

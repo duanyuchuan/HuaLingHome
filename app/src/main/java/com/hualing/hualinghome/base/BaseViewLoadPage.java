@@ -32,7 +32,7 @@ public abstract class BaseViewLoadPage extends FrameLayout {
      */
     public void loadDataFromNetWork(){
         //清空状态
-        if(mCurrentState == STATE_LOADING || mCurrentState==STATE_LOAD_EMPTY || mCurrentState==STATE_LOAD_ERROR || mCurrentState==STATE_LOAD_SUCCESS){
+        if( mCurrentState==STATE_LOAD_EMPTY || mCurrentState==STATE_LOAD_ERROR || mCurrentState==STATE_LOAD_SUCCESS){
             mCurrentState=STATE_UNLOAD;
         }
         if(mCurrentState==STATE_UNLOAD){
@@ -62,9 +62,9 @@ public abstract class BaseViewLoadPage extends FrameLayout {
     //**************************加载网络数据结束******************************
     //**************************结果状态开始******************************
     public enum ResultState{
-        STATE_SUCCES(STATE_LOAD_SUCCESS),
-        STATE_ERROR(STATE_LOAD_ERROR),
-        STATE_EMPTY(STATE_LOAD_EMPTY);
+        LOAD_SUCCES(STATE_LOAD_SUCCESS),
+        LOAD_ERROR(STATE_LOAD_ERROR),
+        LOAD_EMPTY(STATE_LOAD_EMPTY);
 
         private int mState;
         private ResultState(int state){

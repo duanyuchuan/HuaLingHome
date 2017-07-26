@@ -32,11 +32,4 @@ public class HomeFragmentInfo {
         this.title = title;
     }
 
-    @Override
-    public String toString() {
-        return "FragmentInfo{" +
-                "mFragment=" + mFragment +
-                ", title='" + title + '\'' +
-                '}';
-    }
 }

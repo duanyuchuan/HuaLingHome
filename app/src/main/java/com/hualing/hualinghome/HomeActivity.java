@@ -1,11 +1,8 @@
 package com.hualing.hualinghome;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-
 import com.hualing.hualinghome.base.BaseActivity;
 import com.hualing.hualinghome.fragment.find.FindFragment;
 import com.hualing.hualinghome.fragment.home.HomeFragment;
@@ -20,7 +17,7 @@ import com.hualing.hualinghome.view.LayoutBottomBar;
  */
 public class HomeActivity extends BaseActivity implements IBottomItemClickListener {
     private LayoutBottomBar mLayoutBottomBar;
-    private HomeFragment mHomeFragment;
+    private FragmentManager mFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +26,7 @@ public class HomeActivity extends BaseActivity implements IBottomItemClickListen
         setContentView(R.layout.activity_home);
         setNoTitleBar(true);
         //StatusBarCompat.compat(this, Color.TRANSPARENT);
+        mFragmentManager=getSupportFragmentManager();
         //初始化视图
         initView();
     }
@@ -39,48 +37,36 @@ public class HomeActivity extends BaseActivity implements IBottomItemClickListen
     private void initView() {
         mLayoutBottomBar=(LayoutBottomBar)findViewById(R.id.bottombar);
         mLayoutBottomBar.setOnIBottomItemClickListener(this);
-        mHomeFragment=new HomeFragment();
-        replaceContentByFragment(mHomeFragment);
+
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fl_home_content,new HomeFragment());
+        fragmentTransaction.commit();
     }
 
     /**
      * 点击底部栏
-     * @param view
+     * @param action
      */
     @Override
-    public void onBottomItemClick(View view) {
-        switch (view.getId()){
+    public void onBottomItemClick(int action) {
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+        switch (action){
             case R.id.rl_home:
-                if(mHomeFragment != null){
-                    replaceContentByFragment(mHomeFragment);
-                }else{
-                    mHomeFragment=new HomeFragment();
-                    replaceContentByFragment(mHomeFragment);
-                }
+                fragmentTransaction.replace(R.id.fl_home_content,new HomeFragment());
                 break;
             case R.id.rl_shard:
-                replaceContentByFragment(new ShardFragment());
+                fragmentTransaction.replace(R.id.fl_home_content,new ShardFragment());
                 break;
             case R.id.rl_find:
-                replaceContentByFragment(new FindFragment());
+                fragmentTransaction.replace(R.id.fl_home_content,new FindFragment());
                 break;
             case R.id.rl_shop:
-                replaceContentByFragment(new ShopFragment());
+                fragmentTransaction.replace(R.id.fl_home_content,new ShopFragment());
                 break;
             case R.id.rl_my:
-                replaceContentByFragment(new MyFragment());
+                fragmentTransaction.replace(R.id.fl_home_content,new MyFragment());
                 break;
         }
-    }
-    /**
-     * 切换Fragment
-     * @param fragment
-     */
-    private void replaceContentByFragment(Fragment fragment){
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-        fragmentTransaction.replace(R.id.fl_home_content,fragment);
         fragmentTransaction.commit();
     }
 }

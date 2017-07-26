@@ -7,12 +7,12 @@ import android.support.v4.app.Fragment;
  * @time 2016/10/14  16:08
  * @desc ${TODD}
  */
-public class FragmentInfo {
+public class ShopFragmentInfo {
     Fragment mFragment;
     String title;
 
-    public FragmentInfo(Fragment fragment, String title) {
-        mFragment = fragment;
+    public ShopFragmentInfo(Fragment fragment, String title) {
+        this.mFragment = fragment;
         this.title = title;
     }
 
@@ -30,13 +30,5 @@ public class FragmentInfo {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    @Override
-    public String toString() {
-        return "FragmentInfo{" +
-                "mFragment=" + mFragment +
-                ", title='" + title + '\'' +
-                '}';
     }
 }

@@ -20,6 +20,6 @@ public class BeautyFragment extends BaseFragment{
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
-        return BaseViewLoadPage.ResultState.STATE_EMPTY;
+        return BaseViewLoadPage.ResultState.LOAD_EMPTY;
     }
 }

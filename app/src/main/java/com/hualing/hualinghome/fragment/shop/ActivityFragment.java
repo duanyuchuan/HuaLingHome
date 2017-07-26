@@ -1,6 +1,7 @@
 package com.hualing.hualinghome.fragment.shop;
 
 import android.view.View;
+import android.widget.EditText;
 
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.base.BaseFragment;
@@ -15,11 +16,14 @@ public class ActivityFragment extends BaseFragment{
 
     @Override
     public View onCreateLoadSuccesView() {
-        return UiUtils.inflate(R.layout.fragment_activity);
+        View rootView = UiUtils.inflate(R.layout.fragment_activity);
+        EditText textView = rootView.findViewById(R.id.tv_activity);
+        System.out.println("onCreateLoadSuccesView:"+textView.getText().toString());
+        return rootView;
     }
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
-        return BaseViewLoadPage.ResultState.STATE_EMPTY;
+        return BaseViewLoadPage.ResultState.LOAD_SUCCES;
     }
 }

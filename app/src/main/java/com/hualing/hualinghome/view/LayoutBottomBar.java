@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.hualing.hualinghome.R;
@@ -17,27 +16,22 @@ import com.hualing.hualinghome.interfaces.IBottomItemClickListener;
  */
 
 public class LayoutBottomBar extends LinearLayout implements View.OnClickListener{
-    private RelativeLayout mRLHome;
     private ImageView mIVHome;
     private ImageView mIVHomeSelect;
     private TextView mTVHome;
 
-    private RelativeLayout mRLShard;
     private ImageView mIVShard;
     private ImageView mIVShardSelect;
     private TextView mTVShard;
 
-    private RelativeLayout mRLFind;
     private ImageView mIVFind;
     private ImageView mIVFindSelect;
     private TextView mTVFind;
 
-    private RelativeLayout mRLShop;
     private ImageView mIVShop;
     private ImageView mIVShopSelect;
     private TextView mTVShop;
 
-    private RelativeLayout mRLMy;
     private ImageView mIVMy;
     private ImageView mIVMySelect;
     private TextView mTVMy;
@@ -61,38 +55,34 @@ public class LayoutBottomBar extends LinearLayout implements View.OnClickListene
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        mRLHome = findViewById(R.id.rl_home);
+        findViewById(R.id.rl_home).setOnClickListener(this);
+        findViewById(R.id.rl_shard).setOnClickListener(this);
+        findViewById(R.id.rl_find).setOnClickListener(this);
+        findViewById(R.id.rl_shop).setOnClickListener(this);
+        findViewById(R.id.rl_my).setOnClickListener(this);
+
         mIVHome = findViewById(R.id.iv_home_bottombar);
         mIVHomeSelect=findViewById(R.id.iv_home_select_bottombar);
         mTVHome=findViewById(R.id.tv_home_bottombar);
-        mRLHome.setOnClickListener(this);
-        mIVHome.setSelected(true);
-        mTVHome.setSelected(true);
-        mIVHomeSelect.setVisibility(View.VISIBLE);
 
-        mRLShard = findViewById(R.id.rl_shard);
         mIVShard = findViewById(R.id.iv_shard_bottombar);
         mIVShardSelect=findViewById(R.id.iv_shard_select_bottombar);
         mTVShard=findViewById(R.id.tv_shard_bottombar);
-        mRLShard.setOnClickListener(this);
 
-        mRLFind = findViewById(R.id.rl_find);
         mIVFind = findViewById(R.id.iv_find_bottombar);
         mIVFindSelect=findViewById(R.id.iv_find_select_bottombar);
         mTVFind=findViewById(R.id.tv_find_bottombar);
-        mRLFind.setOnClickListener(this);
 
-        mRLShop = findViewById(R.id.rl_shop);
         mIVShop = findViewById(R.id.iv_shop_bottombar);
         mIVShopSelect=findViewById(R.id.iv_shop_select_bottombar);
         mTVShop=findViewById(R.id.tv_shop_bottombar);
-        mRLShop.setOnClickListener(this);
 
-        mRLMy = findViewById(R.id.rl_my);
         mIVMy = findViewById(R.id.iv_my_hualing_bottombar);
         mIVMySelect=findViewById(R.id.iv_my_hualing_select_bottombar);
         mTVMy=findViewById(R.id.tv_my_hualing_bottombar);
-        mRLMy.setOnClickListener(this);
+
+        //模拟第一次点击
+        findViewById(R.id.rl_home).performClick();
     }
     /**
      * 点击事件
@@ -103,10 +93,10 @@ public class LayoutBottomBar extends LinearLayout implements View.OnClickListene
         if(mTabItemId==view.getId()){
             return;
         }
-        mTabItemId=view.getId();
         changeTabItemStyle(view);
         if(mIBottomItemClickListener != null){
-            mIBottomItemClickListener.onBottomItemClick(view);
+            mIBottomItemClickListener.onBottomItemClick(view.getId());
+            mTabItemId=view.getId();
         }
     }
     /**

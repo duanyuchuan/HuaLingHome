@@ -20,6 +20,6 @@ public class EntertainmentFragment extends BaseFragment{
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
-        return BaseViewLoadPage.ResultState.STATE_ERROR;
+        return BaseViewLoadPage.ResultState.LOAD_SUCCES;
     }
 }
