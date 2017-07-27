@@ -18,12 +18,13 @@ public class ActivityFragment extends BaseFragment{
     public View onCreateLoadSuccesView() {
         View rootView = UiUtils.inflate(R.layout.fragment_activity);
         EditText textView = rootView.findViewById(R.id.tv_activity);
-        System.out.println("onCreateLoadSuccesView:"+textView.getText().toString());
+        System.out.println("onCreateLoadSuccesView:");
         return rootView;
     }
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
+        System.out.println("onLoadData:");
         return BaseViewLoadPage.ResultState.LOAD_SUCCES;
     }
 }

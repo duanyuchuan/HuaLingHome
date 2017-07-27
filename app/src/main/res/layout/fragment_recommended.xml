@@ -5,7 +5,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/category_icon_select"
+        android:src="@mipmap/navigation02"
         android:scaleType="fitXY"
         />
 </RelativeLayout>

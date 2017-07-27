@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
+
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.utils.ThreadManager;
 import com.hualing.hualinghome.utils.UiUtils;
@@ -31,6 +32,7 @@ public abstract class BaseViewLoadPage extends FrameLayout {
      * 加载网络数据
      */
     public void loadDataFromNetWork(){
+        //System.out.println("loadDataFromNetWork:");
         //清空状态
         if( mCurrentState==STATE_LOAD_EMPTY || mCurrentState==STATE_LOAD_ERROR || mCurrentState==STATE_LOAD_SUCCESS){
             mCurrentState=STATE_UNLOAD;
@@ -132,6 +134,7 @@ public abstract class BaseViewLoadPage extends FrameLayout {
         }
         //显示成功的布局
         showRinghtPage();
+        loadDataFromNetWork();
     }
     /**
      * 创建成功的视图对象必须由子类来实现

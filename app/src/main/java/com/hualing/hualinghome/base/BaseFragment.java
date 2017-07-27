@@ -45,7 +45,7 @@ public abstract class BaseFragment extends Fragment{
     /**
      * 开始加载网络数据
      */
-    public void startLoadDataFromNetWork(){
+    public void loadData(){
         if(mBaseViewLoadPage != null){
             mBaseViewLoadPage.loadDataFromNetWork();
         }

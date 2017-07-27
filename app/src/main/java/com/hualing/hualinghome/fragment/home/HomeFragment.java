@@ -8,11 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.adapter.MyHomeFragmentAdapter;
+import com.hualing.hualinghome.base.BaseFragment;
 import com.hualing.hualinghome.bean.HomeFragmentInfo;
 import com.hualing.hualinghome.utils.UiUtils;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
+
 import java.util.ArrayList;
 
 /**
@@ -33,6 +36,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //System.out.println("HomeFragment:<----->onActivityCreated");
         //初始化视图
         initView();
         //监听事件
@@ -95,7 +99,8 @@ public class HomeFragment extends Fragment {
             }
             @Override
             public void onPageSelected(int position) {
-
+                BaseFragment fragment = (BaseFragment)mPage.get(position).getFragment();
+                fragment.loadData();
             }
             @Override
             public void onPageScrollStateChanged(int state) {

@@ -12,6 +12,7 @@ import com.hualing.hualinghome.utils.UiUtils;
  */
 
 public class RecommendedFragment extends BaseFragment{
+
     @Override
     public View onCreateLoadSuccesView() {
         return UiUtils.inflate(R.layout.fragment_recommended);
@@ -19,6 +20,6 @@ public class RecommendedFragment extends BaseFragment{
 
     @Override
     public BaseViewLoadPage.ResultState onLoadData() {
-        return BaseViewLoadPage.ResultState.LOAD_ERROR;
+        return BaseViewLoadPage.ResultState.LOAD_SUCCES;
     }
 }

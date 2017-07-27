@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.adapter.MyShopFragmentPagerAdapter;
+import com.hualing.hualinghome.base.BaseFragment;
 import com.hualing.hualinghome.bean.ShopFragmentInfo;
 import com.hualing.hualinghome.utils.UiUtils;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
@@ -111,10 +112,13 @@ public class ShopFragment extends Fragment{
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
             }
+
             @Override
             public void onPageSelected(int position) {
-
+                BaseFragment fragment = (BaseFragment) mPages.get(position).getFragment();
+                fragment.loadData();
             }
+
             @Override
             public void onPageScrollStateChanged(int state) {
 

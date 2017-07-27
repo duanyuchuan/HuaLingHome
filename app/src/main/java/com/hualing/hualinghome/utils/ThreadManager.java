@@ -34,7 +34,7 @@ public class ThreadManager {
         private int mMaxThreadNum;
         private long mKeepAliveTime;
 
-        public ThreadPool(int coreThreadNum,int maxThreadNum,long keepAliveTime){
+        private ThreadPool(int coreThreadNum,int maxThreadNum,long keepAliveTime){
             this.mCoreThreadNum=coreThreadNum;
             this.mMaxThreadNum=maxThreadNum;
             this.mKeepAliveTime=keepAliveTime;
