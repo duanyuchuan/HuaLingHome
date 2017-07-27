@@ -14,9 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.hualing.hualinghome.HomeActivity;
 import com.hualing.hualinghome.R;
-import com.hualing.hualinghome.base.BaseActivity;
 import com.hualing.hualinghome.utils.MyConstaints;
 import com.hualing.hualinghome.utils.SharedpreferencesUtil;
 import com.hualing.hualinghome.utils.StartActivity;

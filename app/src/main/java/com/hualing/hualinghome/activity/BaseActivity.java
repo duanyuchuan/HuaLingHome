@@ -1,4 +1,4 @@
-package com.hualing.hualinghome.base;
+package com.hualing.hualinghome.activity;
 
 import android.os.Build;
 import android.os.Bundle;

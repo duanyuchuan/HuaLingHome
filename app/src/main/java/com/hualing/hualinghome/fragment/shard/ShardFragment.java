@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.hualing.hualinghome.R;
-import com.hualing.hualinghome.base.BaseFragment;
+import com.hualing.hualinghome.fragment.BaseFragment;
 import com.hualing.hualinghome.base.BaseViewLoadPage;
 
 /**

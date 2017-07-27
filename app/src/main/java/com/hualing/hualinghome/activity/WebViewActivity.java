@@ -8,7 +8,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.hualing.hualinghome.R;
-import com.hualing.hualinghome.base.BaseActivity;
 import com.hualing.hualinghome.bean.ActionParams;
 
 /**

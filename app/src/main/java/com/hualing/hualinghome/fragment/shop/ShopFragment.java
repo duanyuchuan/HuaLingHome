@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.adapter.MyShopFragmentPagerAdapter;
-import com.hualing.hualinghome.base.BaseFragment;
+import com.hualing.hualinghome.fragment.BaseFragment;
 import com.hualing.hualinghome.bean.ShopFragmentInfo;
 import com.hualing.hualinghome.utils.UiUtils;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;

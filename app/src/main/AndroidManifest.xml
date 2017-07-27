@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme"
         >
         <activity
-            android:name=".HomeActivity"
+            android:name=".activity.HomeActivity"
             android:launchMode="singleTask"
             >
 

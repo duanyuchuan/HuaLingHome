@@ -3,7 +3,7 @@ package com.hualing.hualinghome.fragment.shop;
 import android.view.View;
 
 import com.hualing.hualinghome.R;
-import com.hualing.hualinghome.base.BaseFragment;
+import com.hualing.hualinghome.fragment.BaseFragment;
 import com.hualing.hualinghome.base.BaseViewLoadPage;
 import com.hualing.hualinghome.utils.UiUtils;
 

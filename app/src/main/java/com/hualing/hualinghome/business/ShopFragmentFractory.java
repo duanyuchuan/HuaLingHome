@@ -1,6 +1,6 @@
 package com.hualing.hualinghome.business;
 
-import com.hualing.hualinghome.base.BaseFragment;
+import com.hualing.hualinghome.fragment.BaseFragment;
 import com.hualing.hualinghome.fragment.shop.ActivityFragment;
 import com.hualing.hualinghome.fragment.shop.BagsFragment;
 import com.hualing.hualinghome.fragment.shop.BeautyFragment;

@@ -1,9 +1,11 @@
-package com.hualing.hualinghome;
+package com.hualing.hualinghome.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import com.hualing.hualinghome.base.BaseActivity;
+
+import com.hualing.hualinghome.R;
+import com.hualing.hualinghome.activity.BaseActivity;
 import com.hualing.hualinghome.fragment.find.FindFragment;
 import com.hualing.hualinghome.fragment.home.HomeFragment;
 import com.hualing.hualinghome.fragment.my.MyFragment;
