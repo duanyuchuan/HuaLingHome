@@ -26,7 +26,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -34,7 +33,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/gson-2.6.2.jar')
     compile files('libs/heima_bitmaplib.jar')
-    compile files('libs/android-support-v4.jar')
     compile files('libs/slidingmenulibary.jar')
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     compile 'com.github.bieliaievays:viewpagerindicator:1.7'

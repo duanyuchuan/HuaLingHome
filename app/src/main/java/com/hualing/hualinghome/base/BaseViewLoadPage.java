@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
-
 import com.hualing.hualinghome.R;
 import com.hualing.hualinghome.utils.ThreadManager;
 import com.hualing.hualinghome.utils.UiUtils;
@@ -15,7 +14,6 @@ import com.hualing.hualinghome.utils.UiUtils;
 /**根据网络的状态显示页面的基类
  * Created by Administrator on 2017/7/23.
  */
-
 public abstract class BaseViewLoadPage extends FrameLayout {
     private static final int STATE_UNLOAD = 0;// 未加载
     private static final int STATE_LOADING = 1;// 正在加载
@@ -27,6 +25,7 @@ public abstract class BaseViewLoadPage extends FrameLayout {
     private View mLoadErrorView;
     private View mLoadEmptyView;
     private View mLoadSuccessView;
+
     //**************************加载网络数据开始******************************
     /**
      * 加载网络数据

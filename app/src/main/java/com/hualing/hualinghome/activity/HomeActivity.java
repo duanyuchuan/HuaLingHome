@@ -5,13 +5,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import com.hualing.hualinghome.R;
-import com.hualing.hualinghome.activity.BaseActivity;
 import com.hualing.hualinghome.fragment.find.FindFragment;
 import com.hualing.hualinghome.fragment.home.HomeFragment;
 import com.hualing.hualinghome.fragment.my.MyFragment;
 import com.hualing.hualinghome.fragment.shard.ShardFragment;
 import com.hualing.hualinghome.fragment.shop.ShopFragment;
-import com.hualing.hualinghome.interfaces.IBottomItemClickListener;
+import com.hualing.hualinghome.listener.IBottomItemClickListener;
 import com.hualing.hualinghome.view.LayoutBottomBar;
 
 /**

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              android:gravity="center_horizontal"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <LinearLayout
+        android:id="@+id/lly_loading_more"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -15,13 +17,38 @@
             android:indeterminateDrawable="@drawable/custom_progress" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/tv_more_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="正在加载..."
             android:textColor="#000"
             android:textSize="16sp" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_load_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:clickable="true"
+        android:drawableLeft="@mipmap/album_rank_goods_uncollected"
+        android:visibility="gone"
+        android:text="加载失败,重试"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_no_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:clickable="true"
+        android:drawableLeft="@mipmap/i_like_solid_icon"
+        android:visibility="gone"
+        android:text="我也是有底线的哟！"
+        android:textColor="#000"
+        android:textSize="16sp" />
 
 </LinearLayout>

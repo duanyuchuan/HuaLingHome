@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hualing.hualinghome.R;
-import com.hualing.hualinghome.interfaces.IBottomItemClickListener;
+import com.hualing.hualinghome.listener.IBottomItemClickListener;
 
 /**
  * Created by Administrator on 2017/7/20.

@@ -9,4 +9,10 @@ public class MyConstaints {
 	public static String ISFIRST="true";
 	//最近一次展示图片的索引值
 	public static String LAST_IMAGE_INDEX="image_index";
+
+	//首页，华领新闻的url地址
+	public static String HUALING_NEWS_URL="http://c.m.163.com/nc/article/headline/T1348647909107/0-20.html?\n" +
+			"from=toutiao&size=20&passport=&devId=bMo6EQztO2ZGFBurrbgcMQ%3D%3D&lat=YO6p1koFB04ckeiATuYaGw%3D%3D&lon=SQIt%2FB7%2BSqySYsiVHI%2\n" +
+			"FDiQ%3D%3D&version=7.0&net=wifi&ts=1463198253&sign=VHsiElahM1HTWFL0pnd52EoxE3w9piu1mp9jiCwGatd48ErR02zJ6%2FKXOnxX046I&encryptio\n" +
+			"n=1&canal=goapk_news";
 }
